@@ -2,4 +2,8 @@ nav{
     border-bottom: 1px solid black;
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(rgb(27, 27, 27) , #690da6 90%);
+}
+img{
+    padding: 20px;
 }
