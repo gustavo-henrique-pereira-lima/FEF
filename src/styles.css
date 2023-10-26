@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     font-family: Arial;
     box-sizing: border-box;
+    font-family: 'Share Tech Mono';
+}
+a{
+    text-decoration: none;
+    color: black;
 }
