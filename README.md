@@ -74,449 +74,447 @@ Instruções de uso
 Obs.: É essencial realizar a leitura das documentações oficiais fornecidas por meio dos links na descrição das etapas, com o objetivo de compreender as funcionalidades desses recursos utilizados para a criação desse projeto, a fim de aprimorar o desenvolvimento caso haja esse desejo. Além disso, deve-se ressaltar que foram utilizadas as linguagens `HTML` (Hypertext Markup Language) e `CSS` (Cascading Style Sheets) em junção com o framework Angular na construção do código que permeia a Tela de Login e Tela de Cadastro.
 
 ## Código documentado (Detalhamento):
-### HTML:
-<form>
-  <!-- Essa div é um contêiner geral que agrupa todo o conteúdo do formulário. -->
-  <div class="container">
-    <div>
-      <p class="login">Login</p>
-    </div>
-    <!-- Uma quebra de linha (espaço em branco) para adicionar espaço vertical. -->
-    <br>
-    <!-- Esta div cria um grupo para o campo de entrada de e-mail. -->
-    <div class="form">
-      <label for="exampleInputEmail1" class="form-label"></label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu E-mail">
-    </div> 
-    <br>
-    <div class="form">
-      <label for="exampleInputPassword1" class="form-label"></label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
-    </div>
-    <br>
-    <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+
+### HTML DO LOGIN
+
+    <form>    
     
-    <div class="botao">
-      <div class="entrar">
-        <a class="seta" href="#"><img src="/assets/seta.png" alt=""></a>
-      </div>
+      <!-- Essa div é um contêiner geral que agrupa todo o conteúdo do formulário. -->
+      <div class="container">
       
-      <div class="renovarSenha">
-        <a href="">Esqueci minha senha</a>
-      </div>
-    </div>
-
-    <br>
-<!-- Esta div contém um link "Cadastre-se," 
-  que provavelmente leva os usuários para a página de cadastro quando clicado. -->
-    <div class="cadastrar">
-      <a href="/cadastro">Cadastre-se</a>
-    </div>
-
-  </div>
-</form>
-
-### CSS:
-/* agrupa todo o conteúdo do formulário. */
-.container{
-    background-image: url(/assets/fundo-tom-roxos.png);
-    display: flex;
-    /*align-items: center;*/
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 50px;
-    width: 400px;
-    border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 3px 3px 7px;
-}
-
-/* estilo de login*/
-.login{
-    font-size: 40px;
-    color: white;
-    display: flex;
-    justify-content: center;
+        <div>
+          <p class="login">Login</p>
+        </div>
+        
+        <!-- Uma quebra de linha (espaço em branco) para adicionar espaço vertical. -->
+        
+        <br>
+        
+        <!-- Esta div cria um grupo para o campo de entrada de e-mail. -->
+        <div class="form">
+          <label for="exampleInputEmail1" class="form-label"></label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu E-mail">
+        </div> 
+        <br>
+        
+        <div class="form">
+          <label for="exampleInputPassword1" class="form-label"></label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+        </div>
+        <br>
+        
+        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+        <div class="botao">
+          <div class="entrar">
+            <a class="seta" href="#"><img src="/assets/seta.png" alt=""></a>
+          </div>
+          
+          <div class="renovarSenha">
+            <a href="">Esqueci minha senha</a>
+          </div>
+        </div>
+        <br>
     
-}
+        <!-- Esta div contém um link "Cadastre-se," 
+          que provavelmente leva os usuários para a página de cadastro quando clicado. -->
 
-.form{
-    gap: 10px;
-}
-input{
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    border: 0;
-    box-shadow: 1px 1px 5px black;
-    background-color: #c9c9c9;
-}
+        <div class="cadastrar">
+          <a href="/cadastro">Cadastre-se</a>
+        </div>
+        
+      </div>
+    </form>
 
-/* estilo dos butons*/
-.botao{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
 
-}
-    .entrar{
-        width: 100%;
-        background-color: #B15EFF;
+### CSS DO LOGIN
+    
+    /* agrupa todo o conteúdo do formulário. */
+    
+    .container{
+        background-image: url(/assets/fundo-tom-roxos.png);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 50px;
+        width: 400px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 3px 3px 7px;
+    }
+    
+    /* estilo de login*/
+    
+    .login{
+        font-size: 40px;
+        color: white;
         display: flex;
         justify-content: center;
-        border-radius: 10px;
-        height: 100%;
+    }
+    
+    .form{
+        gap: 10px;
+    }
+    
+    input{
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 1px 1px 5px black;
+        background-color: #c9c9c9;
+    }
+    
+    /* estilo dos butons*/
+    
+    .botao{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+        .entrar{
+            width: 100%;
+            background-color: #B15EFF;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px;
+        }
+        
+            .seta{
+                height: 30px;
+            }
+            
+        .renovarSenha{
+            background-color: #FFC436;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 13px;
+            box-shadow: 1px 1px 5px;
+        }
+        
+    .cadastrar{
+        background-color: #C70039;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
         border-radius: 5px;
         box-shadow: 1px 1px 5px;
     }
-        .seta{
-            height: 30px;
+
+### HTML DO CADASTRO:
+    
+    <div class="container">
+        <div class="form">
+            <form action="#">
             
-        }
-    .renovarSenha{
-        background-color: #FFC436;
+                <!-- Essa div contém o título "Cadastre-se" que aparece no topo do formulário. -->
+                
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                
+                <!-- Esta div agrupa várias entradas de informações no formulário, como nome,
+                    sobrenome, e-mail, número de celular, senha e confirmação de senha. -->
+                    
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+    
+                    <div class="input-box">
+                        <label for="Confirmpassword">Confirme sua senha</label>
+                        <input id="Confirmpassword" type="password" name="Confirmpassword" placeholder="Confirme sua senha" required>
+                    </div>
+                </div>
+                
+                <div class="gender-inputs">
+                    <!-- Esta div agrupa as opções de gênero, como "Feminino," "Masculino," "Outros" e "Prefiro não dizer." -->
+                    <div class="gender-tittle">
+                        <h6>Gênero</h6>
+                    </div>
+    
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+    
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+    
+                        <div class="gender-input">
+                            <input type="radio" id="others" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+    
+                        <div class="gender-input">
+                            <input type="radio" id="none" name="gender">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Esta div contém um botão "Continuar." Quando clicado, 
+                    o botão pode realizar alguma ação no lado do cliente ou redirecionar o usuário 
+                    para outra página, embora o link no botão esteja configurado como "#" (um link vazio). -->
+                    
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a></button>
+                </div>
+                
+                <!-- Esta div contém um botão "Voltar" que,
+                     quando clicado, redireciona o usuário para a página "/login". -->
+                     
+                <br>
+                <div class="voltar">
+                    <button><a href="/login">Voltar</a></button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+### CSS DO CADASTRO
+    body {
+        width: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
-        font-size: 13px;
-        box-shadow: 1px 1px 5px;
+        background: #0cBce94d;
     }
-
-
-
-.cadastrar{
-    background-color: #C70039;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px;
-}
-
-### HTML: 
-<div class="container">
-    <div class="form">
-        <form action="#">
-            <!-- Essa div contém o título "Cadastre-se" que aparece no topo do formulário. -->
-            <div class="title">
-                <h1>Cadastre-se</h1>
-            </div>
-            <!-- Esta div agrupa várias entradas de informações no formulário, como nome,
-                sobrenome, e-mail, número de celular, senha e confirmação de senha. -->          
-            <div class="input-group">
-                <div class="input-box">
-                    <label for="firstname">Primeiro nome</label>
-                    <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="lastname">Sobrenome</label>
-                    <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="number">Celular</label>
-                    <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="password">Senha</label>
-                    <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                </div>
-
-                <div class="input-box">
-                    <label for="Confirmpassword">Confirme sua senha</label>
-                    <input id="Confirmpassword" type="password" name="Confirmpassword" placeholder="Confirme sua senha" required>
-                </div>
-            </div>
-            
-            <div class="gender-inputs">
-                <!-- Esta div agrupa as opções de gênero, como "Feminino," "Masculino," "Outros" e "Prefiro não dizer." -->
-                <div class="gender-tittle">
-                    <h6>Gênero</h6>
-                </div>
-
-                <div class="gender-group">
-                    <div class="gender-input">
-                        <input type="radio" id="female" name="gender">
-                        <label for="female">Feminino</label>
-                    </div>
-
-                    <div class="gender-input">
-                        <input type="radio" id="male" name="gender">
-                        <label for="male">Masculino</label>
-                    </div>
-
-                    <div class="gender-input">
-                        <input type="radio" id="others" name="gender">
-                        <label for="others">Outros</label>
-                    </div>
-
-                    <div class="gender-input">
-                        <input type="radio" id="none" name="gender">
-                        <label for="none">Prefiro não dizer</label>
-                    </div>
-                </div>
-            </div>
-            <!-- Esta div contém um botão "Continuar." Quando clicado, 
-                o botão pode realizar alguma ação no lado do cliente ou redirecionar o usuário 
-                para outra página, embora o link no botão esteja configurado como "#" (um link vazio). -->
-            <div class="continue-button">
-                <button><a href="#">Continuar</a></button>
-            </div>
-            <!-- Esta div contém um botão "Voltar" que,
-                 quando clicado, redireciona o usuário para a página "/login". -->
-            <br>
-            <div class="voltar">
-                <button><a href="/login">Voltar</a></button>
-            </div>
-        </form>
-    </div>
-</div>
-
-### CSS:
-body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #0cBce94d;
-}
-/* agrupa todo o conteúdo do formulário.*/
-.container {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    box-shadow: 5px 5px rgba(0, 0, 0, .212);
     
-}
-/* representa a área do formulário */
-.form {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 3px 3px 10px ;
-    border-radius: 15px;
-}
-
-.form-header {
-    margin-bottom: 3rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.login-button {
-    display: flex;
-    align-items: center;
-}
-
-.login-button button {
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-button button:hover {
-    background-color: #6b63fff1;
-}
-
-.login-button button a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-}
-
-.form-header h1::after {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 0.3rem;
-    background-color: #6c63ff;
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 10px;
-}
-
-.input-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 1rem 0;
-}
-
-.input-box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.1rem;
-}
-
-.input-box input {
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c
-}
-
-.input-box input:hover {
-    background-color: #eeeeee75;
-}
-
-.input-box input:focus-visible {
-    outline: 1px solid #6c63ff;
-}
-
-.input-box label,
-.gender-title h6 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #000000c0;
-}
-
-.input-box input::placeholder {
-    color: #000000be;
-}
-
-.gender-group {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0 0.5rem;
-}
-
-.gender-input {
-    display: flex;
-    align-items: center;
-}
-
-.gender-input input {
-    margin-right: 0.35rem;
-}
-
-.gender-input label {
-    font-size: 0.81rem;
-    font-weight: 600;
-    color: #000000c0;
-}
-
-.continue-button button {
-    width: 100%;
-    margin-top: 2.5rem;
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.62rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.continue-button button:hover {
-    background-color: #6b63fff1;
-} 
-
-.continue-button button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
-}
-
-.voltar button{
-    width: 100%;
-    border: none;
-    background-color: #6c63ff;
-    padding: 0.62rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.voltar button:hover {
-    background-color: #6b63fff1;
-} 
-
-.voltar button a {
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 500;
-    color: #fff;
-}
-
-
-
-@media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
+    /* agrupa todo o conteúdo do formulário.*/
+    
     .container {
-        width: 50%;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        box-shadow: 5px 5px rgba(0, 0, 0, .212);
     }
+    
+    /* representa a área do formulário */
+    
     .form {
-        width: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 3px 3px 10px ;
+        border-radius: 15px;
     }
-}
-
-@media screen and (max-width: 1064px) {
-    .container {
-        width: 90%;
-        height: auto;
+    
+    .form-header {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
     }
+    
+    .login-button {
+        display: flex;
+        align-items: center;
+    }
+    
+    .login-button button {
+        border: none;
+        background-color: #6c63ff;
+        padding: 0.4rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .login-button button:hover {
+        background-color: #6b63fff1;
+    }
+    
+    .login-button button a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    .form-header h1::after {
+        content: '';
+        display: block;
+        width: 5rem;
+        height: 0.3rem;
+        background-color: #6c63ff;
+        margin: 0 auto;
+        position: absolute;
+        border-radius: 10px;
+    }
+    
     .input-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    
+    .input-box {
+        display: flex;
         flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem; 
+        margin-bottom: 1.1rem;
     }
-    .gender-inputs {
-        margin-top: 2rem;
+    
+    .input-box input {
+        margin: 0.6rem 0;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 1px 1px 6px #0000001c
     }
+    
+    .input-box input:hover {
+        background-color: #eeeeee75;
+    }
+    
+    .input-box input:focus-visible {
+        outline: 1px solid #6c63ff;
+    }
+    
+    .input-box label,
+    .gender-title h6 {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #000000c0;
+    }
+    
+    .input-box input::placeholder {
+        color: #000000be;
+    }
+    
     .gender-group {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0 0.5rem;
     }
+    
     .gender-input {
-        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
     }
-};
-
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    
+    .gender-input input {
+        margin-right: 0.35rem;
+    }
+    
+    .gender-input label {
+        font-size: 0.81rem;
+        font-weight: 600;
+        color: #000000c0;
+    }
+    
+    .continue-button button {
+        width: 100%;
+        margin-top: 2.5rem;
+        border: none;
+        background-color: #6c63ff;
+        padding: 0.62rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .continue-button button:hover {
+        background-color: #6b63fff1;
+    } 
+    
+    .continue-button button a {
+        text-decoration: none;
+        font-size: 0.93rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    .voltar button{
+        width: 100%;
+        border: none;
+        background-color: #6c63ff;
+        padding: 0.62rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .voltar button:hover {
+        background-color: #6b63fff1;
+    } 
+    
+    .voltar button a {
+        text-decoration: none;
+        font-size: 0.93rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    
+    @media screen and (max-width: 1330px) {
+        .form-image {
+            display: none;
+        }
+        .container {
+            width: 50%;
+        }
+        .form {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 1064px) {
+        .container {
+            width: 90%;
+            height: auto;
+        }
+        .input-group {
+            flex-direction: column;
+            overflow-y: scroll;
+            flex-wrap: nowrap;
+            max-height: 10rem;
+            padding-right: 5rem; 
+        }
+        .gender-inputs {
+            margin-top: 2rem;
+        }
+        .gender-group {
+            flex-direction: column;
+        }
+        .gender-input {
+            margin-top: 0.5rem;
+        }
+    };
