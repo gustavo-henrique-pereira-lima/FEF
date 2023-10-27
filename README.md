@@ -1,4 +1,12 @@
-# FEF
+# FRONT END FRAMEWORK (FEF)
+> Diosne Marlon Furtado dos Santos - 04109634
+
+> Gustavo Henrique Pereira Lima - 04098527
+
+> Kauan Leandro Gonçalves de Araújo Moreira - 04113076
+
+> Paulo Sérgio Barros Teixeira - 04147128
+
 > Status: This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 <h1>Introdução ao Projeto:</h1>
 Este projeto demonstra a criação de uma aplicação web utilizando o framework Angular. O Angular é amplamente utilizado para o desenvolvimento front-end, sendo uma das principais opções comumente usuais para a criação de interfaces de usuário interativas e dinâmicas disponíveis atualmente.
@@ -518,3 +526,116 @@ Obs.: É essencial realizar a leitura das documentações oficiais fornecidas po
             margin-top: 0.5rem;
         }
     };
+
+## Descrições dos componentes da tela de login no código
+
+1. Contêiner Geral:
+   - A primeira div é um contêiner geral que agrupa todo o conteúdo do formulário de login.
+
+2. Título "Login":
+   - Um elemento p com a classe "login" que exibe o título "Login" na tela.
+
+3. Campo de E-mail:
+   - Uma div que cria um grupo para o campo de entrada de e-mail.
+   - Um label vazio com a classe "form-label" que fornece uma etiqueta visual para o campo de entrada de e-mail.
+   - Um input de tipo "email" com a classe "form-control" que permite que os usuários insiram seu endereço de e-mail. O atributo placeholder fornece um espaço reservado para orientação.
+
+4. Campo de Senha:
+   - Outra div  que cria um grupo para o campo de entrada de senha.
+   - Um label vazio com a classe "form-label" que atua como uma etiqueta visual para o campo de entrada de senha.
+   - Um input de tipo "password" com a classe "form-control" que permite aos usuários inserir sua senha. O atributo placeholder oferece uma dica de inserção.
+
+5. Botões "Entrar" e "Esqueci Minha Senha":
+   - Uma div com a classe "botao" que contém duas partes:
+     - entrar: Uma div que inclui um link "Seta" que provavelmente é usado para submeter o formulário de login.
+     - EsqueciMinharSenha: Uma div que contém um link "Esqueci minha senha," que os usuários podem usar para redefinir a senha.
+
+6. Link "Cadastre-se":
+   - Uma div com a classe "cadastrar" que contém um link "Cadastre-se." Ao clicar neste link, os usuários provavelmente serão redirecionados para a página de cadastro.
+
+Descrições dos componentes do cadastro.component.html
+
+1. Título "Cadastre-se":
+   - Esta div contém o título "Cadastre-se" que aparece no topo do formulário. Ele fornece um título claro para a seção de cadastro.
+
+2. Agrupamento de Entradas de Informação:
+   - Esta div agrupa várias entradas de informações no formulário, incluindo nome, sobrenome, e-mail, número de celular, senha e confirmação de senha. Isso organiza os campos relacionados em uma seção coerente do formulário.
+
+3. Entrada de Primeiro Nome:
+   - Um campo de entrada para o primeiro nome, identificado pela etiqueta "Primeiro nome." O atributo required indica que o preenchimento deste campo é obrigatório.
+
+4. Entrada de Sobrenome:
+   - Um campo de entrada para o sobrenome, identificado pela etiqueta "Sobrenome". Assim como o campo anterior, este campo também requer preenchimento obrigatório.
+
+5. Entrada de E-mail:
+   - Um campo de entrada para o endereço de e-mail, identificado pela etiqueta "E-mail." Também possui a obrigatoriedade de preenchimento.
+
+6. Entrada de Número de Celular:
+   - Um campo de entrada para o número de celular, identificado pela etiqueta "Celular." Ele segue o formato "(xx) xxxxx-xxxx" e exige preenchimento obrigatório.
+
+7. Entrada de Senha:
+   - Um campo de entrada para a senha, identificado pela etiqueta "Senha." O preenchimento é obrigatório, e este campo é usado para criar uma senha.
+
+8. Confirmação de Senha:
+   - Um campo de entrada para a confirmação da senha, identificado pela etiqueta "Confirme sua senha." Isso ajuda a garantir que a senha seja inserida corretamente, com a obrigatoriedade de preenchimento.
+
+9. Opções de Gênero:
+   - Esta div agrupa as opções de gênero, incluindo "Feminino," "Masculino," "Outros" e "Prefiro não dizer." Os usuários podem selecionar uma das opções usando botões de rádio.
+
+10. Botão "Continuar":
+    - Esta div contém um botão "Continuar" que permite aos usuários prosseguir com o processo de cadastro. No entanto, o link no botão está configurado como "#" (um link vazio), o que significa que a ação real a ser executada pode depender da funcionalidade do aplicativo.
+
+11. Botão "Voltar":
+    - Esta div contém um botão "Voltar" que redireciona o usuário para a página "/login" quando clicado. Isso permite que os usuários voltem para a página de login, caso desejem retornar à etapa anterior.
+
+Descrições dos componentes cadastro.component.css
+
+1. Estilo do Corpo (body):
+   - O seletor body estiliza o corpo da página. Ele configura a largura e altura como 100% da janela, centralizando o conteúdo vertical e horizontalmente. O plano de fundo é definido com a cor #0cBce94d, criando um fundo semitransparente.
+
+2. Estilo do Contêiner (container):
+   - O componente .container envolve todo o conteúdo do formulário. Define a largura como 80% da janela, centraliza o conteúdo vertical e horizontalmente, aplica uma sombra e uma borda arredondada.
+
+3. Estilo da Área do Formulário (form):
+   - O seletor .form estiliza a área do formulário. Define a largura como 50%, centraliza o conteúdo vertical e horizontalmente, cria um fundo branco, adiciona preenchimento e uma sombra suave. Ele é posicionado absolutamente no centro da tela.
+
+4. Estilo do Botão de Login (login-button):
+   - O .login-button estiliza o botão "Entrar." Define o estilo do botão com uma cor de fundo, preenchimento, borda arredondada e um cursor ao passar o mouse.
+
+5. Estilo dos Campos de Entrada (input-box):
+   - Os .input-box estilizam as caixas de entrada e seus rótulos correspondentes. Aplicam margens, preenchimento, borda e sombra suave nas caixas de entrada. Além disso, estilizam os rótulos e definem um estilo de foco quando o usuário interage com os campos.
+
+6. Estilo dos Botões de Gênero (gender-input):
+   - Este seletor estiliza as opções de gênero (Feminino, Masculino, Outros, Prefiro não dizer). Alinha horizontalmente as opções, aplica margens e estilos aos rótulos e botões de seleção de gênero.
+
+7. Estilo do Botão de Continuar (continue-button):
+   - O botão "Continuar" é estilizado com características semelhantes ao botão de "Entrar". Define a largura, margem superior, estilo do botão e estilo de foco.
+
+8. Estilo do Botão de Voltar (voltar):
+   - O botão "Voltar" possui estilos semelhantes aos botões anteriores e é usado para permitir que os usuários retornem à tela de login.
+
+9. Estilos Responsivos (media queries):
+   - Esses estilos responsivos se aplicam a diferentes tamanhos de tela. Eles ocultam a imagem em telas menores e ajustam o layout para proporcionar uma experiência de usuário aprimorada.
+
+Essas descrições são fornecidas de acordo com o código CSS no arquivo cadastro.component.css e podem ser incluídas na documentação do projeto para ajudar os usuários a entender como o estilo é aplicado a cada componente.
+
+## Descrições dos componentes login.component.css
+
+1. .container: Esta classe agrupa todo o conteúdo do formulário. Ela define a imagem de fundo do formulário, o posicionamento no centro da tela, a largura, o espaçamento, o raio de borda, a margem e a sombra da caixa.
+
+2. .login: Esta classe estiliza o texto "Login", definindo o tamanho da fonte, a cor e centralizando-o horizontalmente na tela.
+
+3. .form: Define um espaçamento entre os elementos filhos dentro do formulário.
+
+4. input: Estiliza todos os campos de entrada de texto no formulário, definindo a largura, preenchimento, borda arredondada, sombra, fundo e outras propriedades.
+
+5. .botao: Esta classe cria um contêiner de botões de login e "Esqueci minha senha". Usa uma grade CSS para alinhar os botões lado a lado com um espaçamento entre eles.
+
+6. .entrar: Estiliza o botão de "Entrar", definindo a largura, cor de fundo, centralização de conteúdo, raio de borda e sombra.
+
+7. .seta: Estiliza a seta dentro do botão "Entrar", definindo a altura.
+
+8. .EsqueciMinhaSenha: Estiliza o botão "Esqueci minha senha" com cores de fundo, centralização de conteúdo, sombra e tamanho de fonte.
+
+9. .cadastrar: Estiliza o botão "Cadastre-se" com cores de fundo, centralização de conteúdo, tamanho de fonte, raio de borda e sombra.
+
